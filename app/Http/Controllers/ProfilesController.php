@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Profiles;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreProfilesRequest;
 use App\Http\Requests\UpdateProfilesRequest;
+use Symfony\Component\HttpKernel\Profiler\Profile;
 
 class ProfilesController extends Controller
 {
@@ -16,6 +19,7 @@ class ProfilesController extends Controller
     public function index()
     {
         //
+        return view('profiles.index');
     }
 
     /**
@@ -26,6 +30,7 @@ class ProfilesController extends Controller
     public function create()
     {
         //
+        return view('profiles.create');
     }
 
     /**
@@ -37,6 +42,26 @@ class ProfilesController extends Controller
     public function store(StoreProfilesRequest $request)
     {
         //
+        $request->validate([
+            'FirstName' => 'required|size:25' ,
+            'LastName' => 'requiredsize:25',
+            'Avtar' => 'required | mimes:jpg,png|file|size:512',
+            'Bio' => 'required|size:225',
+            'gender' => 'required ',
+        ]);
+
+        // $profiles = Profile::create([
+        //     'FirstName' => $request->firstName ,
+        //     'LastName' => $request-> lastName,
+        //     'Avtar' => $request->file(' avtar') ,
+        //     'Bio' => $request-> bio,
+        //     'gender' => $request-> gender,
+        // ]);
+
+        // Auth::login($user);
+
+        return redirect(RouteServiceProvider::HOME);
+
     }
 
     /**
@@ -48,6 +73,7 @@ class ProfilesController extends Controller
     public function show(Profiles $profiles)
     {
         //
+        return view('profiles.show');
     }
 
     /**
@@ -59,6 +85,7 @@ class ProfilesController extends Controller
     public function edit(Profiles $profiles)
     {
         //
+        return view('profiles.edit');
     }
 
     /**

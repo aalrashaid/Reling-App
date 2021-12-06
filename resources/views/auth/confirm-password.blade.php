@@ -1,36 +1,25 @@
 <x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+    <main class="form-signin">
+         <!-- Validation Errors -->
+        <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
         <div class="mb-4 text-sm text-gray-600">
             {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
         </div>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
         <form method="POST" action="{{ route('password.confirm') }}">
             @csrf
-
-            <!-- Password -->
-            <div>
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
-            </div>
-
-            <div class="flex justify-end mt-4">
-                <x-button>
-                    {{ __('Confirm') }}
-                </x-button>
-            </div>
+          <img class="mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+          <h1 class="h3 mb-3 fw-normal">password confirm</h1>
+      
+          <div class="form-floating">
+            <input type="password" id="password" name="password" class="form-control"  placeholder="password" required autocomplete="current-password">
+            <label for="password" >Password</label>
+          </div>
+          
+          
+          <button class="w-100 btn btn-lg btn-primary" type="submit">{{ __('Confirm') }}</button>
+          
         </form>
-    </x-auth-card>
+    </main>
 </x-guest-layout>

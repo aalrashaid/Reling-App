@@ -24,7 +24,13 @@ class StoreProfilesRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'FirstName' => '' ,
+            'LastName' => '',
+            'Avtar' => '',
+            'Bio' => '',
+            'gender' => '',
+            
+
         ];
     }
 }

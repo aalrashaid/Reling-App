@@ -1,10 +1,7 @@
 <x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+    <main class="form-signin">
+        <img class="mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+        <h1 class="h3 mb-3 fw-normal">verify email</h1>
 
         <div class="mb-4 text-sm text-gray-600">
             {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
@@ -16,24 +13,15 @@
             </div>
         @endif
 
-        <div class="mt-4 flex items-center justify-between">
+        <div class="">
             <form method="POST" action="{{ route('verification.send') }}">
                 @csrf
-
-                <div>
-                    <x-button>
-                        {{ __('Resend Verification Email') }}
-                    </x-button>
-                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">{{ __('Resend Verification Email') }}</button>
             </form>
-
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
-
-                <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900">
-                    {{ __('Log Out') }}
-                </button>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">{{ __('Log Out') }}</button>
             </form>
         </div>
-    </x-auth-card>
+    </main>
 </x-guest-layout>

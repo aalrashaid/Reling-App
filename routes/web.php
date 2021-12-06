@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+// The Import  Controller All 
+use App\Http\Controllers\ProfilesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +22,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+// The  Controller get All  
+Route::resource('Profiles', ProfilesController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

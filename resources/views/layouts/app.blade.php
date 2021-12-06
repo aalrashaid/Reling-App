@@ -12,10 +12,11 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
 
         
     </head>
-    <body class="font-sans antialiased">
+    <body class="text-center">
         <div class="min-h-screen bg-gray-100">
             {{-- @include('layouts.navigation')
 

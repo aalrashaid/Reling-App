@@ -11,9 +11,24 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js');
+//  mix.webpackConfig({
+//     externals: {
+//       jquery: 'jQuery'
+//     }
+//   });
 
-mix.sass('resources/sass/app.scss', 'public/css');
+mix.js('resources/js/app.js', 'public/js')
+.js('resources/js/bootstrapjs/bootstrap.js', 'public/js')
+.js('resources/js/jquery/jquery.min.js', 'public/js')
+.js('resources/js/plyrjs/plyr.js', 'public/js')
+.js('resources/js/webtorrent/webtorrent.min.js', 'public/js');
+
+mix//.postCss('resources/css/bootstrap-icons.css', 'public/css')
+   .postCss('resources/css/plyr.css', 'public/css');
+
+mix.sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/sass/bootstrap-icons/bootstrap-icons.scss','public/css')
+    .sass('resources/sass/bootstrap/bootstrap.scss','public/css');
 
 mix.copyDirectory('resources/fonts', 'public/fonts');
 mix.copyDirectory('resources/images', 'public/images');

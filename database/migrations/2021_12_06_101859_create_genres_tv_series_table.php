@@ -14,7 +14,12 @@ class CreateGenresTvSeriesTable extends Migration
     public function up()
     {
         Schema::create('genres_tv_series', function (Blueprint $table) {
-            $table->id();
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8mb4';
+            $table->collation = 'utf8mb4_unicode_ci';
+            $table->id()->comment('a primary key for table');
+            $table->integer('thmdbID')->nullable()->comment('a primary key for table');
+            $table->string('name')->nullable()->comment('a primary key for table');
             $table->timestamps();
         });
     }

@@ -14,7 +14,16 @@ class CreateCollectionsTable extends Migration
     public function up()
     {
         Schema::create('collections', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8mb4';
+            $table->collation = 'utf8mb4_unicode_ci';
             $table->id();
+            $table->string('thmdb_id')->nullable()->comment('The Name of people ');
+            $table->string('name')->nullable()->comment('The Name of people ');
+            $table->text('overview')->nullable()->comment('The Name of people ');
+            $table->binary('poster_path')->nullable()->comment('The Name of people ');
+            $table->binary('backdrop_path')->nullable()->comment('The Name of people ');
+            $table->json('parts')->nullable()->comment('The Name of people ');
             $table->timestamps();
         });
     }

@@ -14,9 +14,10 @@ class CreateProfilesTable extends Migration
     public function up()
     {
         Schema::create('profiles', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
-            $table->id()->comment('primary key in Table profiles');
+            $table->id()->comment('a primary key for table');
             $table->foreignId('users_id')->references('id')->on('users')->comment('foreign key tables users');
             $table->string('FirstName')->comment('gender for user');
             $table->string('LastName')->comment('gender for user');

@@ -14,7 +14,14 @@ class CreateCertificationsMoviesTable extends Migration
     public function up()
     {
         Schema::create('certifications_movies', function (Blueprint $table) {
-            $table->id();
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8mb4';
+            $table->collation = 'utf8mb4_unicode_ci';
+            $table->id()->comment('a primary key for table');
+            //$table->integer('votes');
+            $table->string('certifications')->nullable()->comment('a primary key for table');
+            $table->mediumText('meaning')->nullable()->comment('a primary key for table');
+            $table->integer('order')->nullable()->comment('a primary key for table');
             $table->timestamps();
         });
     }

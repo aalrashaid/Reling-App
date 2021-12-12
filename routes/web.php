@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 // The Import  Controller All 
 use App\Http\Controllers\ProfilesController;
+use App\Http\Controllers\MovieController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +26,7 @@ Route::get('/', function () {
 
 // The  Controller get All  
 Route::resource('Profiles', ProfilesController::class);
+Route::resource('Movie', MovieController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

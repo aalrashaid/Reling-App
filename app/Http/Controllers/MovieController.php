@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Movie;
 use App\Http\Requests\StoreMovieRequest;
 use App\Http\Requests\UpdateMovieRequest;
+use Illuminate\Support\Facades\Http;
 
 class MovieController extends Controller
 {
@@ -16,6 +17,12 @@ class MovieController extends Controller
     public function index()
     {
         //
+        $movie = Http::withToken(config('services.tmdb.token'))
+                ->get('https://api.themoviedb.org/3/movie/11?api_key=&language=en-US')
+                ->json();
+
+                dd($movie);
+        return view('index');
     }
 
     /**

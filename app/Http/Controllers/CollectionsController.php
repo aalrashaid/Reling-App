@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Collections;
 use App\Http\Requests\StoreCollectionsRequest;
 use App\Http\Requests\UpdateCollectionsRequest;
+use Illuminate\Support\Facades\Http;
+
 
 class CollectionsController extends Controller
 {

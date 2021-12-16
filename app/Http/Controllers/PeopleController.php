@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\People;
 use App\Http\Requests\StorePeopleRequest;
 use App\Http\Requests\UpdatePeopleRequest;
+use Illuminate\Support\Facades\Http;
 
 class PeopleController extends Controller
 {

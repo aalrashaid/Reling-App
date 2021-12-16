@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\GenresTvSeries;
 use App\Http\Requests\StoreGenresTvSeriesRequest;
 use App\Http\Requests\UpdateGenresTvSeriesRequest;
+use Illuminate\Support\Facades\Http;
 
 class GenresTvSeriesController extends Controller
 {

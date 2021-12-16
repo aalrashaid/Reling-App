@@ -18,8 +18,9 @@ class CreateMoviesTable extends Migration
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
             $table->id();
-            $table->binary('backdrop_path')->nullable()->comment('The Name of people ');
-            $table->string('belongs_to_collection')->nullable()->comment('The Name of people ');
+            $table->boolean('adult')->nullable()->comment('The Name of people ');
+            $table->string('backdrop_path')->nullable()->comment('The Name of people ');
+            $table->json('belongs_to_collection')->nullable()->comment('The Name of people ');
             $table->string('budget')->nullable()->comment('The Name of people ');
             $table->json('genres')->nullable()->comment('The Name of people ');
             $table->string('homepage')->nullable()->comment('The Name of people ');
@@ -31,7 +32,7 @@ class CreateMoviesTable extends Migration
             $table->decimal('popularity')->nullable()->comment('The Name of people ');
             $table->binary('poster_path')->nullable()->comment('The Name of people ');
             $table->json('production_companies')->nullable()->comment('The Name of people ');
-            $table->string('production_countries')->nullable()->comment('The Name of people ');
+            $table->json('production_countries')->nullable()->comment('The Name of people ');
             $table->string('release_date')->nullable()->comment('The Name of people ');
             $table->string('revenue')->nullable()->comment('The Name of people ');
             $table->string('runtime')->nullable()->comment('The Name of people ');

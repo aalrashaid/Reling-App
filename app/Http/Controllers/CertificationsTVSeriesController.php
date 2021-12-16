@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\CertificationsTVSeries;
 use App\Http\Requests\StoreCertificationsTVSeriesRequest;
 use App\Http\Requests\UpdateCertificationsTVSeriesRequest;
+use Illuminate\Support\Facades\Http;
 
 class CertificationsTVSeriesController extends Controller
 {

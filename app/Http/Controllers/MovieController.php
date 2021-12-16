@@ -17,12 +17,12 @@ class MovieController extends Controller
     public function index()
     {
         //
-        $movie = Http::withToken(config('services.tmdb.token'))
-                ->get('https://api.themoviedb.org/3/movie/11?api_key=&language=en-US')
-                ->json();
+        // $popularMovies = Http::withToken(config('services.tmdb.token'))
+        // ->get('https://api.themoviedb.org/3/movie/popular?api_key=fa8ef6fb28e7af2a83c9004235a0a935&language=en-US&page=1')
+        // ->json()['results'];
 
-                dd($movie);
-        return view('index');
+        // dump($popularMovies);
+        // return view('Movies.index',['popularMovies' => $popularMovies]);
     }
 
     /**

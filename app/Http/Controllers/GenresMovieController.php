@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\GenresMovie;
 use App\Http\Requests\StoreGenresMovieRequest;
 use App\Http\Requests\UpdateGenresMovieRequest;
+use Illuminate\Support\Facades\Http;
 
 class GenresMovieController extends Controller
 {

@@ -4,10 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\DB;
-
-class TvSeriesSeeder extends Seeder
+class TvSeriesdetailsSeeder extends Seeder
 {
     /**
      * Run the database seeds.

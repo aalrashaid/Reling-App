@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\CertificationsMovie;
 use App\Http\Requests\StoreCertificationsMovieRequest;
 use App\Http\Requests\UpdateCertificationsMovieRequest;
+use Illuminate\Support\Facades\Http;
 
 class CertificationsMovieController extends Controller
 {
@@ -16,6 +17,12 @@ class CertificationsMovieController extends Controller
     public function index()
     {
         //
+        $CertificationsMovie = Http::withToken(config('services.tmdb.token'))
+                ->get('https://api.themoviedb.org/3/certification/movie/list')
+                ->json();
+
+                dd($$CertificationsMovie);
+        return view('index');
     }
 
     /**

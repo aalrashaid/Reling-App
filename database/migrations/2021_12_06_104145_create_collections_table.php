@@ -21,8 +21,8 @@ class CreateCollectionsTable extends Migration
             $table->string('thmdb_id')->nullable()->comment('The Name of people ');
             $table->string('name')->nullable()->comment('The Name of people ');
             $table->text('overview')->nullable()->comment('The Name of people ');
-            $table->binary('poster_path')->nullable()->comment('The Name of people ');
-            $table->binary('backdrop_path')->nullable()->comment('The Name of people ');
+            $table->string('poster_path')->nullable()->comment('The Name of people ');
+            $table->string('backdrop_path')->nullable()->comment('The Name of people ');
             $table->json('parts')->nullable()->comment('The Name of people ');
             $table->timestamps();
         });

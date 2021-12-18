@@ -30,7 +30,7 @@ class CreateMoviesTable extends Migration
             $table->string('original_title')->nullable()->comment('The Name of people ');
             $table->text('overview')->nullable()->comment('The Name of people ');
             $table->decimal('popularity')->nullable()->comment('The Name of people ');
-            $table->binary('poster_path')->nullable()->comment('The Name of people ');
+            $table->string('poster_path')->nullable()->comment('The Name of people ');
             $table->json('production_companies')->nullable()->comment('The Name of people ');
             $table->json('production_countries')->nullable()->comment('The Name of people ');
             $table->string('release_date')->nullable()->comment('The Name of people ');

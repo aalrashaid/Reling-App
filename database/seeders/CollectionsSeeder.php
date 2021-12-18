@@ -44,8 +44,10 @@ class CollectionsSeeder extends Seeder
                         'thmdb_id'=>$Collections['id'],
                         'name'=>$Collections['name'],
                         'overview'=>$Collections['overview'],
-                        'poster_path'=>$base_link_tmdb.$Collections['poster_path'],
-                        'backdrop_path'=>$base_link_tmdb.$Collections['backdrop_path'],
+                        // 'poster_path'=>$base_link_tmdb.$Collections['poster_path'],
+                        'poster_path'=>$Collections['poster_path'],
+                        // 'backdrop_path'=>$base_link_tmdb.$Collections['backdrop_path'],
+                        'backdrop_path'=>$Collections['backdrop_path'],
                         'parts'=>json_encode($Collections['parts']),
                         
                         

@@ -49,8 +49,8 @@ class MovieSeeder extends Seeder
                 if(isset($movie['id'])){
                     $item=[
                         'adult'=>$movie['adult'],
-                        'backdrop_path'=>$base_link_tmdb.$movie['backdrop_path'],
-                        // 'backdrop_path'=>$movie['backdrop_path'],
+                        // 'backdrop_path'=>$base_link_tmdb.$movie['backdrop_path'],
+                        'backdrop_path'=>$movie['backdrop_path'],
                         'belongs_to_collection'=>json_encode($movie['belongs_to_collection']),
                         'budget'=>$movie['budget'],
                         'genres'=>json_encode($movie['genres']),
@@ -61,7 +61,8 @@ class MovieSeeder extends Seeder
                         'original_title'=>$movie['original_title'],
                         'overview'=>$movie['overview'],
                         'popularity'=>$movie['popularity'],
-                        'poster_path'=>$base_link_tmdb.$movie['poster_path'],
+                        // 'poster_path'=>$base_link_tmdb.$movie['poster_path'],
+                        'poster_path'=>$movie['poster_path'],
                         'production_companies'=>json_encode($movie['production_companies']),
                         'production_countries'=>json_encode($movie['production_countries']),
                         'release_date'=>$movie['release_date'],

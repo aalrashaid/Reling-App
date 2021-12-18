@@ -20,8 +20,8 @@ class DatabaseSeeder extends Seeder
             // GenresSeeder::class,
             // ResolutionsSeeder::class,
             //PermissionsSeeder::class,
-           // MovieSeeder::class,
-            CollectionsSeeder::class,
+            //MovieSeeder::class,
+            //CollectionsSeeder::class,
           ]);
     }
 }

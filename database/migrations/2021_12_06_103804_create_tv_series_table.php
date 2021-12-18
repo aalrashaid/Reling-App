@@ -18,7 +18,7 @@ class CreateTvSeriesTable extends Migration
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
             $table->id();
-            $table->binary('backdrop_path')->nullable()->comment('The Name of people ');
+            $table->string('backdrop_path')->nullable()->comment('The Name of people ');
             $table->json('created_by')->nullable()->comment('The Name of people ');
             $table->string('episode_run_time')->nullable()->comment('The Name of people ');
             $table->date('first_air_date')->nullable()->comment('The Name of people ');
@@ -39,7 +39,7 @@ class CreateTvSeriesTable extends Migration
             $table->string('original_name')->nullable()->comment('The Name of people ');
             $table->text('overview')->nullable()->comment('The Name of people ');
             $table->string('popularity')->nullable()->comment('The Name of people ');
-            $table->binary('poster_path')->nullable()->comment('The Name of people ');
+            $table->string('poster_path')->nullable()->comment('The Name of people ');
             $table->json('production_companies')->nullable()->comment('The Name of people ');
             $table->json('production_countries')->nullable()->comment('The Name of people ');
             $table->json('seasons')->nullable()->comment('The Name of people ');

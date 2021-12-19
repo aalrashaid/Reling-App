@@ -14,40 +14,40 @@ class Search extends Model
      *
      * @var string
      */
-    protected $table = 'my_flights';
+    //protected $table = 'my_flights';
 
     /**
      * The primary key associated with the table.
      *
      * @var string
      */
-    protected $primaryKey = 'flight_id';
+    //protected $primaryKey = 'flight_id';
 
     /**
      * Indicates if the model's ID is auto-incrementing.
      *
      * @var bool
      */
-    public $incrementing = false;
+    //public $incrementing = false;
 
     /**
      * Indicates if the model should be timestamped.
      *
      * @var bool
      */
-    public $timestamps = false;
+    //public $timestamps = false;
 
     /**
      * The storage format of the model's date columns.
      *
      * @var string
      */
-    protected $dateFormat = 'U';
+    //protected $dateFormat = 'U';
 
      /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['name'];
+    //protected $fillable = ['name'];
 }

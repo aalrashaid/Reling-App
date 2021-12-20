@@ -50,4 +50,29 @@ class MagnetLinks extends Model
      * @var array
      */
     protected $fillable = ['users_id','request_posts_id','movies_id','tv_series_id','magnet_links',];
+
+      /**
+     * Get the user that owns the phone.
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    /**
+     * Get the Resolutions for the blog post.
+     */
+    public function Resolutions()
+    {
+        return $this->hasMany(Resolutions::class);
+    }
+
+    /**
+     * Get the post for the blog post.
+     */
+    public function post()
+    {
+        return $this->hasMany(post::class);
+    }
+
 }

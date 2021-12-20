@@ -50,4 +50,12 @@ class Resolutions extends Model
      * @var array
      */
     protected $fillable = ['name','slug','description',];
+
+     /**
+     * Get the MagnetLinks that owns the phone.
+     */
+    public function MagnetLinks()
+    {
+        return $this->belongsTo(MagnetLinks::class);
+    }
 }

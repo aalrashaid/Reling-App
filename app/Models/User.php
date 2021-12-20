@@ -53,4 +53,29 @@ class User extends Authenticatable
     {
         return $this->hasOne(Profiles::class);
     }
+
+    /**
+     * Get the RequestPosts associated with the user.
+     */
+    public function RequestPosts()
+    {
+        return $this->hasOne(RequestPosts::class);
+        
+    }
+
+     /**
+     * Get the Lists associated with the user.
+     */
+    public function Lists()
+    {
+        return $this->hasOne(Lists::class);
+    }
+
+     /**
+     * Get the WatchList associated with the user.
+     */
+    public function WatchList()
+    {
+        return $this->hasOne(WatchList::class);
+    }
 }

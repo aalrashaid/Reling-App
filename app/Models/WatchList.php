@@ -50,4 +50,13 @@ class WatchList extends Model
      * @var array
      */
     protected $fillable = ['users_id','movies_id','tv_series_id',];
+
+      /**
+     * Get the user that owns the phone.
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 }

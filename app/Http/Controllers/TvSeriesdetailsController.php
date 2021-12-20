@@ -6,6 +6,8 @@ use App\Models\TvSeriesdetails;
 use App\Http\Requests\StoreTvSeriesdetailsRequest;
 use App\Http\Requests\UpdateTvSeriesdetailsRequest;
 
+use app\Models\TvSeries;
+
 class TvSeriesdetailsController extends Controller
 {
     /**

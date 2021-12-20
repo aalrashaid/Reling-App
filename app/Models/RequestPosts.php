@@ -50,4 +50,28 @@ class RequestPosts extends Model
      * @var array
      */
     protected $fillable = ['users_id','movies_id','tv_series_id','name','thmdb_id','body',];
+
+     /**
+     * Get the user that owns the phone.
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+      /**
+     * Get the MagnetLinks that owns the phone.
+     */
+    public function MagnetLinks()
+    {
+        return $this->belongsTo(MagnetLinks::class);
+    }
+
+    /**
+     * Get the comments for the blog post.
+     */
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

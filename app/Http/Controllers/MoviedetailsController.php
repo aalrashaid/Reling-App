@@ -6,6 +6,8 @@ use App\Models\Moviedetails;
 use App\Http\Requests\StoreMoviedetailsRequest;
 use App\Http\Requests\UpdateMoviedetailsRequest;
 
+use app\Models\Movie;
+
 class MoviedetailsController extends Controller
 {
     /**

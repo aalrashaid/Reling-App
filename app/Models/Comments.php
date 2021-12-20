@@ -50,4 +50,12 @@ class Comments extends Model
      * @var array
      */
     protected $fillable = ['users_id','request_posts_id','body',];
+
+    /**
+     * Get the post that owns the comment.
+     */
+    public function post()
+    {
+        return $this->belongsTo(Post::class);
+    }
 }

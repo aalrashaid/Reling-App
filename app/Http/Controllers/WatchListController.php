@@ -16,6 +16,7 @@ class WatchListController extends Controller
     public function index()
     {
         //
+        return view(' WatchList.index');
     }
 
     /**

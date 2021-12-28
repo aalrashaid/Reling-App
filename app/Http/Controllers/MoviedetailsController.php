@@ -18,6 +18,7 @@ class MoviedetailsController extends Controller
     public function index()
     {
         //
+        return view('Movie.details');
     }
 
     /**

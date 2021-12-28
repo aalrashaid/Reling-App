@@ -16,6 +16,7 @@ class AnimeSeriesController extends Controller
     public function index()
     {
         //
+        return view('Anime.index');
     }
 
     /**

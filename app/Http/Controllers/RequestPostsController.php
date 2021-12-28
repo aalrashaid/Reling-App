@@ -16,6 +16,7 @@ class RequestPostsController extends Controller
     public function index()
     {
         //
+        return view('RequestPosts.index');
     }
 
     /**

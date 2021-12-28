@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\TvSeries;
-use App\Http\Requests\StoreTvSeriesRequest;
-use App\Http\Requests\UpdateTvSeriesRequest;
-use Illuminate\Support\Facades\Http;
+use App\Models\AnimeSeriesdetails;
+use App\Http\Requests\StoreAnimeSeriesdetailsRequest;
+use App\Http\Requests\UpdateAnimeSeriesdetailsRequest;
 
-class TvSeriesController extends Controller
+class AnimeSeriesdetailsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +16,8 @@ class TvSeriesController extends Controller
     public function index()
     {
         //
-        return view('TvSeries.index');
+
+        return view('Anime.index');
     }
 
     /**
@@ -33,10 +33,10 @@ class TvSeriesController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreTvSeriesRequest  $request
+     * @param  \App\Http\Requests\StoreAnimeSeriesdetailsRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreTvSeriesRequest $request)
+    public function store(StoreAnimeSeriesdetailsRequest $request)
     {
         //
     }
@@ -44,10 +44,10 @@ class TvSeriesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\TvSeries  $tvSeries
+     * @param  \App\Models\AnimeSeriesdetails  $animeSeriesdetails
      * @return \Illuminate\Http\Response
      */
-    public function show(TvSeries $tvSeries)
+    public function show(AnimeSeriesdetails $animeSeriesdetails)
     {
         //
     }
@@ -55,10 +55,10 @@ class TvSeriesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\TvSeries  $tvSeries
+     * @param  \App\Models\AnimeSeriesdetails  $animeSeriesdetails
      * @return \Illuminate\Http\Response
      */
-    public function edit(TvSeries $tvSeries)
+    public function edit(AnimeSeriesdetails $animeSeriesdetails)
     {
         //
     }
@@ -66,11 +66,11 @@ class TvSeriesController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateTvSeriesRequest  $request
-     * @param  \App\Models\TvSeries  $tvSeries
+     * @param  \App\Http\Requests\UpdateAnimeSeriesdetailsRequest  $request
+     * @param  \App\Models\AnimeSeriesdetails  $animeSeriesdetails
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateTvSeriesRequest $request, TvSeries $tvSeries)
+    public function update(UpdateAnimeSeriesdetailsRequest $request, AnimeSeriesdetails $animeSeriesdetails)
     {
         //
     }
@@ -78,10 +78,10 @@ class TvSeriesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\TvSeries  $tvSeries
+     * @param  \App\Models\AnimeSeriesdetails  $animeSeriesdetails
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TvSeries $tvSeries)
+    public function destroy(AnimeSeriesdetails $animeSeriesdetails)
     {
         //
     }

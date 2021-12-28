@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Reling') }}</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -20,10 +20,10 @@
           </a>
     
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#" class="nav-link px-2 link-dark">Home</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">Movies</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">TV Series</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">Anime</a></li>
+            <li><a href="{{ url('/') }}" class="nav-link px-2 link-dark">Home</a></li>
+            <li><a href="{{ url('/Movie') }}" class="nav-link px-2 link-dark">Movies</a></li>
+            <li><a href="{{ url('/TvSeries') }}" class="nav-link px-2 link-dark">TV Series</a></li>
+            <li><a href="{{ url('/AnimeSeries') }}" class="nav-link px-2 link-dark">Anime</a></li>
           </ul>
           @if (Route::has('login'))
             <div class="col-md-3 text-end">
